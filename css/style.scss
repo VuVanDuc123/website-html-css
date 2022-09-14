@@ -1,0 +1,448 @@
+@import "mixins";
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size  : 14px;
+    box-sizing : border-box;
+}
+
+$main-color      : #fff;
+$background-color: url("../images/menu-top.jpg");
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width : 1000px;
+    margin: 0 auto;
+
+    .header {
+        margin-bottom: 5px;
+
+        &__banner {
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &__menu {
+            width      : 100%;
+            display    : flex;
+            height     : 20px;
+            line-height: 20px;
+            text-align : center;
+
+            &-left {
+                width     : 184px;
+                background: rgb(231, 231, 231);
+            }
+
+            &-right {
+                @include menuStyle();
+                nav {
+                    ul {
+                        li{
+                            transition: .3s ease;
+                        }
+                        li:hover{
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // main
+    .main {
+        margin-bottom: 10px;
+        display      : flex;
+
+        &__left {
+            width: 184px;
+
+            &-nav {
+                width: 100%;
+
+                ul {
+                    li {
+                        background : url(../images/category.jpg) no-repeat;
+                        height     : 20px;
+                        line-height: 20px;
+                        border     : 1px solid #ccc;
+                        text-align : center;
+
+                        a {
+                            font-size: 1rem;
+                            color    : $main-color;
+                        }
+                    }
+                }
+            }
+
+            &-services {
+                width     : 100%;
+                margin    : 10px 0;
+                background: url("../images/services.jpg") no-repeat;
+                height    : 521px;
+
+                &__img {
+                    padding: 45px 0px 0px 4px;
+
+                    ul {
+                        li {
+
+                            // padding: 10px 3px;
+                            a {}
+                        }
+
+                        li:not(:first-child) {
+                            padding-top: 8px;
+                        }
+                    }
+                }
+            }
+
+            &-adv {
+                background-color: #efefef;
+                border          : 2px solid #ccc;
+                border-radius   : 0px 15px 0px 0px;
+
+                &__title {
+                    text-align: center;
+
+                    span {
+                        font-weight: 300;
+                        font-size  : 1.3rem;
+                        height     : 30px;
+                        line-height: 30px;
+                    }
+                }
+
+                &__content {
+                    display        : flex;
+                    flex-direction : column;
+                    justify-content: center;
+                    align-items    : center;
+
+                    img {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+
+        &__center {
+            margin-left: 5px;
+            width      : 502px;
+            height     : 376px;
+
+            .hotNews {
+                background: url(../images/hotnews.jpg) no-repeat;
+                width     : 100%;
+                height    : 100%;
+                position  : relative;
+                cursor    : pointer;
+
+                &__img {
+                    padding-top    : 6px;
+                    display        : flex;
+                    flex-direction : column;
+                    justify-content: center;
+                    align-items    : center;
+                }
+
+                &__title {
+                    width      : 99%;
+                    height     : 50px;
+                    line-height: 50px;
+                    text-align : center;
+                    background : rgba(255, 255, 255, 0.7);
+                    font-size  : 1.3rem;
+                    font-weight: 500;
+                    position   : absolute;
+                    top        : 50%;
+                    left       : 1px;
+                }
+
+                &__article {
+                    ul {
+                        display        : flex;
+                        flex-direction : column;
+                        justify-content: space-around;
+                        align-items    : center;
+                        height         : 90px;
+                        line-height    : 1.5;
+
+                        li {
+                            a {
+                                font-weight: 300;
+                                color      : black;
+                                transition : 0.1s linear;
+                            }
+                        }
+
+                        li:hover a {
+                            color      : red;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+
+            .boxTours {
+                display: flex;
+                margin : 20px 0px;
+
+                .hot__tours {
+                    width       : 264px;
+                    margin-right: 10px;
+
+                    @include toursStyle();
+                }
+
+                .vip__tours {
+                    width: 264px;
+
+                    @include toursStyle();
+
+                    &-title {
+                        background: url(../images/vip-tours.jpg) no-repeat;
+                    }
+                }
+            }
+
+            .popular__tours {
+                width: 498px;
+                @include toursStyle();
+
+                &-title {
+                    background: url(../images/popular-tours.jpg) no-repeat;
+                }
+
+                &-list {
+                    &__title {
+                        display    : block;
+                        font-weight: 500;
+                        font-size  : 1.1rem;
+                    }
+
+                    ul {
+                        li {
+                            a {
+                                img {
+                                    width: 100px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &__right {
+            width      : 302px;
+            margin-left: 5px;
+
+            .Video {
+                border       : 1px solid #ccc;
+                padding      : 10px;
+                border-radius: 10px;
+            }
+
+            .place {
+                margin       : 20px 0px;
+                border       : 1px solid #ccc;
+                border-radius: 10px;
+
+                &__title {
+                    img {
+                        width        : 100%;
+                        border-radius: 10px 10px 0 0;
+                    }
+                }
+
+                &__description {
+                    padding: 10px;
+
+                    ul {
+                        li {
+                            margin-bottom: 15px;
+
+                            a {
+                                display: flex;
+
+                                img {
+                                    padding: 5px;
+                                    border : 1px solid #ccc;
+                                }
+
+                                .place__description-content {
+                                    margin-left: 10px;
+                                    color      : black;
+
+                                    .title {
+                                        font-weight  : 500;
+                                        font-size    : 1rem;
+                                        margin-bottom: 10px;
+                                    }
+
+                                    span {
+                                        line-height: 1.2;
+                                        text-align : justify;
+                                        font-weight: 300;
+                                    }
+
+                                    .title:hover,
+                                    span:hover {
+                                        color: blue;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .food {
+                margin       : 20px 0px;
+                border       : 1px solid #ccc;
+                border-radius: 10px;
+
+                &__title {
+                    img {
+                        width        : 100%;
+                        border-radius: 10px 10px 0 0;
+                    }
+                }
+
+                &__description {
+                    padding: 10px;
+
+                    ul {
+                        li {
+                            margin-bottom: 15px;
+
+                            a {
+                                .food__description-content {
+                                    margin-left: 10px;
+                                    color      : black;
+
+                                    .title {
+                                        font-weight  : 500;
+                                        font-size    : 1rem;
+                                        margin-bottom: 10px;
+                                    }
+
+                                    span {
+                                        line-height: 1.2;
+                                        text-align : justify;
+                                        font-weight: 300;
+                                    }
+
+                                    .title:hover,
+                                    span:hover {
+                                        color: blue;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .support-online {
+                position: relative;
+
+                img {
+                    width: 100%;
+                }
+
+                ul {
+                    position: absolute;
+                    top     : 0;
+                    left    : 30%;
+
+                    li {
+                        margin: 20px 0px;
+
+                        a {
+                            font-weight: 500;
+                            font-size  : 1.1rem;
+                        }
+
+                        a:hover {
+                            color: blue;
+                        }
+                    }
+                }
+            }
+
+            .chart {
+                position  : relative;
+                margin-top: 20px;
+
+                img {
+                    width: 100%;
+                }
+
+                ul {
+                    position: absolute;
+                    top     : 0;
+                    left    : 30%;
+
+                    li {
+                        a {
+                            font-weight: 500;
+                            font-size  : 1rem;
+                            line-height: 1.6;
+                            color      : red;
+                        }
+
+                        a:hover {
+                            color: blue;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    // footer
+    .footer {
+        width: 100%;
+
+        &__menu {
+            @include menuStyle();
+        }
+
+        &__line {
+            margin    : 5px 20px;
+            background: $background-color;
+            height    : 5px;
+        }
+
+        &__copyright {
+            font-weight: 500;
+            font-size  : 1.5rem;
+            height     : 40px;
+            line-height: 40px;
+            text-align : center;
+
+            // chuyển màu
+            background-image       : linear-gradient(to right bottom, blue, red);
+            color                  : transparent;
+            -webkit-background-clip: text;
+            background-clip        : text;
+
+        }
+    }
+}

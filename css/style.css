@@ -1,0 +1,469 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+.container .header {
+  margin-bottom: 5px;
+}
+.container .header__banner {
+  width: 100%;
+}
+.container .header__banner img {
+  width: 100%;
+}
+.container .header__menu {
+  width: 100%;
+  display: flex;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+}
+.container .header__menu-left {
+  width: 184px;
+  background: rgb(231, 231, 231);
+}
+.container .header__menu-right {
+  flex: 1;
+  background: url("../images/menu-top.jpg");
+  height: 20px;
+  line-height: 20px;
+}
+.container .header__menu-right nav ul {
+  display: flex;
+  justify-content: center;
+}
+.container .header__menu-right nav ul li {
+  border-right: 1px solid #fff;
+}
+.container .header__menu-right nav ul li a {
+  color: #fff;
+  margin: 0px 20px;
+  text-transform: capitalize;
+}
+.container .header__menu-right nav ul li {
+  transition: 0.3s ease;
+}
+.container .header__menu-right nav ul li:hover {
+  transform: scale(1.2);
+}
+.container .main {
+  margin-bottom: 10px;
+  display: flex;
+}
+.container .main__left {
+  width: 184px;
+}
+.container .main__left-nav {
+  width: 100%;
+}
+.container .main__left-nav ul li {
+  background: url(../images/category.jpg) no-repeat;
+  height: 20px;
+  line-height: 20px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+.container .main__left-nav ul li a {
+  font-size: 1rem;
+  color: #fff;
+}
+.container .main__left-services {
+  width: 100%;
+  margin: 10px 0;
+  background: url("../images/services.jpg") no-repeat;
+  height: 521px;
+}
+.container .main__left-services__img {
+  padding: 45px 0px 0px 4px;
+}
+.container .main__left-services__img ul li:not(:first-child) {
+  padding-top: 8px;
+}
+.container .main__left-adv {
+  background-color: #efefef;
+  border: 2px solid #ccc;
+  border-radius: 0px 15px 0px 0px;
+}
+.container .main__left-adv__title {
+  text-align: center;
+}
+.container .main__left-adv__title span {
+  font-weight: 300;
+  font-size: 1.3rem;
+  height: 30px;
+  line-height: 30px;
+}
+.container .main__left-adv__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .main__left-adv__content img {
+  margin-bottom: 10px;
+}
+.container .main__center {
+  margin-left: 5px;
+  width: 502px;
+  height: 376px;
+}
+.container .main__center .hotNews {
+  background: url(../images/hotnews.jpg) no-repeat;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+.container .main__center .hotNews__img {
+  padding-top: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .main__center .hotNews__title {
+  width: 99%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7);
+  font-size: 1.3rem;
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  left: 1px;
+}
+.container .main__center .hotNews__article ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 90px;
+  line-height: 1.5;
+}
+.container .main__center .hotNews__article ul li a {
+  font-weight: 300;
+  color: black;
+  transition: 0.1s linear;
+}
+.container .main__center .hotNews__article ul li:hover a {
+  color: red;
+  font-weight: 400;
+}
+.container .main__center .boxTours {
+  display: flex;
+  margin: 20px 0px;
+}
+.container .main__center .boxTours .hot__tours {
+  width: 264px;
+  margin-right: 10px;
+}
+.container .main__center .boxTours .hot__tours-title {
+  background: url(../images/hot-tours.jpg) no-repeat;
+  height: 36px;
+  line-height: 34px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #fff;
+}
+.container .main__center .boxTours .hot__tours-list ul {
+  padding: 0 0 10px 10px;
+  border: 2px solid #ccc;
+  border-top: 0px;
+  border-radius: 0px 0px 10px 10px;
+}
+.container .main__center .boxTours .hot__tours-list ul li a {
+  display: flex;
+  padding-top: 10px;
+  font-weight: 300;
+  color: black;
+}
+.container .main__center .boxTours .hot__tours-list ul li a img {
+  width: 69px;
+  height: 56px;
+}
+.container .main__center .boxTours .hot__tours-list ul li a span {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: justify;
+  margin: 0px 10px;
+  line-height: 1.3;
+}
+.container .main__center .boxTours .hot__tours-list ul li a:hover {
+  color: blue;
+}
+.container .main__center .boxTours .vip__tours {
+  width: 264px;
+}
+.container .main__center .boxTours .vip__tours-title {
+  background: url(../images/hot-tours.jpg) no-repeat;
+  height: 36px;
+  line-height: 34px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #fff;
+}
+.container .main__center .boxTours .vip__tours-list ul {
+  padding: 0 0 10px 10px;
+  border: 2px solid #ccc;
+  border-top: 0px;
+  border-radius: 0px 0px 10px 10px;
+}
+.container .main__center .boxTours .vip__tours-list ul li a {
+  display: flex;
+  padding-top: 10px;
+  font-weight: 300;
+  color: black;
+}
+.container .main__center .boxTours .vip__tours-list ul li a img {
+  width: 69px;
+  height: 56px;
+}
+.container .main__center .boxTours .vip__tours-list ul li a span {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: justify;
+  margin: 0px 10px;
+  line-height: 1.3;
+}
+.container .main__center .boxTours .vip__tours-list ul li a:hover {
+  color: blue;
+}
+.container .main__center .boxTours .vip__tours-title {
+  background: url(../images/vip-tours.jpg) no-repeat;
+}
+.container .main__center .popular__tours {
+  width: 498px;
+}
+.container .main__center .popular__tours-title {
+  background: url(../images/hot-tours.jpg) no-repeat;
+  height: 36px;
+  line-height: 34px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #fff;
+}
+.container .main__center .popular__tours-list ul {
+  padding: 0 0 10px 10px;
+  border: 2px solid #ccc;
+  border-top: 0px;
+  border-radius: 0px 0px 10px 10px;
+}
+.container .main__center .popular__tours-list ul li a {
+  display: flex;
+  padding-top: 10px;
+  font-weight: 300;
+  color: black;
+}
+.container .main__center .popular__tours-list ul li a img {
+  width: 69px;
+  height: 56px;
+}
+.container .main__center .popular__tours-list ul li a span {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: justify;
+  margin: 0px 10px;
+  line-height: 1.3;
+}
+.container .main__center .popular__tours-list ul li a:hover {
+  color: blue;
+}
+.container .main__center .popular__tours-title {
+  background: url(../images/popular-tours.jpg) no-repeat;
+}
+.container .main__center .popular__tours-list__title {
+  display: block;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.container .main__center .popular__tours-list ul li a img {
+  width: 100px;
+}
+.container .main__right {
+  width: 302px;
+  margin-left: 5px;
+}
+.container .main__right .Video {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+}
+.container .main__right .place {
+  margin: 20px 0px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.container .main__right .place__title img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.container .main__right .place__description {
+  padding: 10px;
+}
+.container .main__right .place__description ul li {
+  margin-bottom: 15px;
+}
+.container .main__right .place__description ul li a {
+  display: flex;
+}
+.container .main__right .place__description ul li a img {
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+.container .main__right .place__description ul li a .place__description-content {
+  margin-left: 10px;
+  color: black;
+}
+.container .main__right .place__description ul li a .place__description-content .title {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.container .main__right .place__description ul li a .place__description-content span {
+  line-height: 1.2;
+  text-align: justify;
+  font-weight: 300;
+}
+.container .main__right .place__description ul li a .place__description-content .title:hover,
+.container .main__right .place__description ul li a .place__description-content span:hover {
+  color: blue;
+}
+.container .main__right .food {
+  margin: 20px 0px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.container .main__right .food__title img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.container .main__right .food__description {
+  padding: 10px;
+}
+.container .main__right .food__description ul li {
+  margin-bottom: 15px;
+}
+.container .main__right .food__description ul li a .food__description-content {
+  margin-left: 10px;
+  color: black;
+}
+.container .main__right .food__description ul li a .food__description-content .title {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.container .main__right .food__description ul li a .food__description-content span {
+  line-height: 1.2;
+  text-align: justify;
+  font-weight: 300;
+}
+.container .main__right .food__description ul li a .food__description-content .title:hover,
+.container .main__right .food__description ul li a .food__description-content span:hover {
+  color: blue;
+}
+.container .main__right .support-online {
+  position: relative;
+}
+.container .main__right .support-online img {
+  width: 100%;
+}
+.container .main__right .support-online ul {
+  position: absolute;
+  top: 0;
+  left: 30%;
+}
+.container .main__right .support-online ul li {
+  margin: 20px 0px;
+}
+.container .main__right .support-online ul li a {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.container .main__right .support-online ul li a:hover {
+  color: blue;
+}
+.container .main__right .chart {
+  position: relative;
+  margin-top: 20px;
+}
+.container .main__right .chart img {
+  width: 100%;
+}
+.container .main__right .chart ul {
+  position: absolute;
+  top: 0;
+  left: 30%;
+}
+.container .main__right .chart ul li a {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: red;
+}
+.container .main__right .chart ul li a:hover {
+  color: blue;
+}
+.container .footer {
+  width: 100%;
+}
+.container .footer__menu {
+  flex: 1;
+  background: url("../images/menu-top.jpg");
+  height: 20px;
+  line-height: 20px;
+}
+.container .footer__menu nav ul {
+  display: flex;
+  justify-content: center;
+}
+.container .footer__menu nav ul li {
+  border-right: 1px solid #fff;
+}
+.container .footer__menu nav ul li a {
+  color: #fff;
+  margin: 0px 20px;
+  text-transform: capitalize;
+}
+.container .footer__line {
+  margin: 5px 20px;
+  background: url("../images/menu-top.jpg");
+  height: 5px;
+}
+.container .footer__copyright {
+  font-weight: 500;
+  font-size: 1.5rem;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-image: linear-gradient(to right bottom, blue, red);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}/*# sourceMappingURL=style.css.map */
